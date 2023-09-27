@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <!--Content-Type: 通过设置 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">，
+    可以指定页面使用的字符编码，确保浏览器正确解析和显示页面内容。
+
+    Refresh: 通过设置 <meta http-equiv="Refresh" content="5; url=http://example.com/">，
+    可以让页面在一定时间后自动跳转到指定的 URL。
+
+    X-UA-Compatible: 通过设置 <meta http-equiv="X-UA-Compatible" content="IE=edge">，
+    可以告诉 IE 浏览器使用最新版本的内核进行渲染。
+
+    总之，http-equiv 属性允许网页作者在 <meta> 标签中模拟某些 HTTP 头部字段，以达到特定的效果，影响浏览器的行为和页面的呈现方式。-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!--指定使用 IE 内核渲染页面主要是为了确保页面在 Internet Explorer 浏览器中得到一致的显示效果。
+    在过去，不同版本的 Internet Explorer 浏览器可能对同一份网页代码的解析和渲染存在差异，
+    导致网页在不同的 IE 版本上显示效果不同甚至出现兼容性问题。这是因为不同版本的 IE 使用了不同的渲染引擎和标准模式。
+    通过设置 <meta http-equiv="X-UA-Compatible" content="IE=edge">，
+    我们告诉 IE 浏览器使用最新版本的可用内核来渲染页面，而不管用户使用的是哪个具体版本的 IE。这有助于解决以下问题：
+    版本一致性： 通过强制使用最新版本的 IE 内核，可以减少不同 IE 版本之间的显示差异，确保页面在各个版本中呈现一致的样式和布局。
+    兼容性： 最新版本的 IE 内核通常会对标准的支持更好，从而提高页面的兼容性，减少在特定 IE 版本下的兼容性问题。
+    性能优化： 较新版本的 IE 内核通常也会包含性能改进，这有助于提高页面的加载速度和响应性。
+    HTML5 和 CSS3 支持： 某些 HTML5 和 CSS3 功能可能在较新版本的 IE 内核中得到更好的支持，通过使用最新内核，页面可以更好地利用这些功能。
+    需要注意的是，由于现代的 IE 版本已经相对更加标准化和兼容性较好，而且大多数网站都已经支持了更多的现代浏览器，因此在许多情况下，指定使用 IE 内核可能并不是必需的。然而，对于那些仍然需要支持旧版 IE 浏览器的项目，设置 <meta http-equiv="X-UA-Compatible" content="IE=edge"> 仍然是一种确保页面兼容性的方式。
+
+    -->
+    <!--指定使用最新的 IE 内核渲染页面。-->
+
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--name="viewport"：这个属性指定了元视口（meta viewport），它用于告诉浏览器如何设置页面的可见区域。
+    content="width=device-width, initial-scale=1"：这里的 content 属性是一个逗号分隔的键值对，其中包含两个值：
+    width=device-width：这个设置告诉浏览器将页面的初始宽度设置为设备的宽度。这意味着页面将根据设备的屏幕宽度自动调整，确保不会出现水平滚动条。
+    initial-scale=1：这个设置指定了页面的初始缩放级别为 1。这意味着页面以正常的 100% 缩放级别显示，不进行缩放。    -->
+    <!--指定页面在移动设备上的视口设置。-->
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>Bootstrap 101 Template</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="./css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+
+    <!-- HTML5 shim 和 Respond.js 是为了让 IE8 支持 HTML5 元素和媒体查询（media queries）功能 -->
+    <!-- 警告：通过 file:// 协议（就是直接将 html 页面拖拽到浏览器中）访问页面时 Respond.js 不起作用 -->
+    <!--[if lt IE 9]>
+    <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+<h1>你好，世界！</h1>
+
+<!-- jQuery (Bootstrap 的所有 JavaScript 插件都依赖 jQuery，所以必须放在前边) -->
+<script src="./js/jquery-3.2.1.min.js" integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous"></script>
+<!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
+<script src="./js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+</body>
+</html>

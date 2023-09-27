@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<img id="canvas" src="../moban2920/images/image/banner_1.jpg">
+<script>
+    var number = 1;
+    function canv() {
+        // var number = 1;
+        if (number>3){
+            number=1;
+        }
+        let imag = document.getElementById("canvas");
+        imag.src = "../moban2920/images/image/banner_"+ number++ +".jpg";
+    }
+    setInterval(canv,3000);
+</script>
+
+</body>
+</html>

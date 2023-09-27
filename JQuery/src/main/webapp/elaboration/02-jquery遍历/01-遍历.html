@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="../../js/jquery-3.3.1.min.js" type="text/javascript" charset="utf-8"></script>
+    <script type="text/javascript">
+        $(function () {
+            var city = $("ul li");
+            // for (var i=0;i<city.length; i++){
+            //     alert(city[i].innerHTML)
+            // }
+            city.each(function (index, element) {
+                if ("上海"==element.innerHTML){
+                    return false;
+                    //true,结束本次循环，继续下次循环(continue)
+                    //false，结束循环(break)
+                }
+                alert(index+":"+element.innerHTML)
+            //.each() 方法：这是 jQuery 提供的一个方法，用于遍历匹配元素集合中的每个元素。
+            // function (index, element)：这是一个回调函数，.each() 方法会将每个匹配的元素作为参数传递给这个函数。
+            // index：这是一个表示当前元素在集合中的索引的整数值。
+            // element：这是当前遍历到的元素，是一个原生的 JavaScript DOM 对象。
+            // 在这段代码中，.each() 方法将 city 对象中的每个元素逐个传递给回调函数。
+            // 回调函数中的 index 表示元素在 city 对象中的索引，而 element 则表示当前遍历到的元素。
+            // element 是一个 JavaScript DOM 对象，而不是 jQuery 对象，因为 .each() 方法返回的是原生 DOM 元素。
+            // 这意味着你可以使用原生 JavaScript 来访问和操作 element，例如使用 element.innerHTML 访问元素的内部 HTML 内容，
+            // 而不需要 jQuery 的方法。
+            })
+            
+            $.each(city,function () {
+                alert(this.innerHTML)
+            })
+
+            for (li of city){
+                alert(li.innerHTML)
+            }
+
+
+        })
+
+
+
+    </script>
+</head>
+<body>
+<ul id="city">
+    <li>北京</li>
+    <li>上海</li>
+    <li>天津</li>
+    <li>重庆</li>
+</ul>
+</body>
+</html>

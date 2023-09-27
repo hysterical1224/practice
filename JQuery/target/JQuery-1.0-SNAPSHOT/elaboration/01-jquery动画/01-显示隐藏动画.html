@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Insert title here</title>
+    <script type="text/javascript" src="../../js/jquery-3.3.1.min.js">
+        // 默认显示和隐藏方式
+        // 1. show([speed,[easing],[fn]])
+        // 1. 参数：
+		// 			1. speed：动画的速度。三个预定义的值("slow","normal", "fast")或表示动画时长的毫秒数值(如：1000)
+        //          2. easing：用来指定切换效果，默认是"swing"，可用参数"linear"
+                        // * swing：动画执行时效果是 先慢，中间快，最后又慢
+                        // * linear：动画执行时速度是匀速的
+        //          3. fn：在动画完成时执行的函数，每个元素执行一次。
+        //
+		// 	2. hide([speed,[easing],[fn]])
+        // 3. toggle([speed],[easing],[fn])
+        //
+
+        //这三个方法是jQuery中用于处理元素的滑动效果的方法，它们可以让元素以动画方式展开（slideDown）、折叠（slideUp）
+        // 或根据当前状态切换展开和折叠（slideToggle）。以下是对这三个方法的解读：
+        //
+        //slideDown([speed],[easing],[fn])：
+        // speed（可选）：指定滑动的速度，可以是字符串（"slow"、"fast"）或以毫秒为单位的数字，表示动画完成所需的时间。默认是 "400" 毫秒。
+        // easing（可选）：指定动画的缓动效果，可以是字符串（"linear"、"swing"）或自定义的缓动函数。默认是 "swing"。
+        // fn（可选）：在动画完成后执行的回调函数。
+        // slideDown 方法用于将隐藏的元素以滑动的方式向下展开，显示在页面上。它通常与隐藏元素的父元素一起使用，以创建展开/折叠的效果。
+        //
+        // slideUp([speed],[easing],[fn])：
+        // speed（可选）：指定滑动的速度，可以是字符串（"slow"、"fast"）或以毫秒为单位的数字，表示动画完成所需的时间。默认是 "400" 毫秒。
+        // easing（可选）：指定动画的缓动效果，可以是字符串（"linear"、"swing"）或自定义的缓动函数。默认是 "swing"。
+        // fn（可选）：在动画完成后执行的回调函数。
+        // slideUp 方法用于将元素以滑动的方式向上折叠，从页面中隐藏。与 slideDown 方法相反，它通常与希望隐藏元素的父元素一起使用。
+        //
+        // slideToggle([speed],[easing],[fn])：
+        // speed（可选）：指定滑动的速度，可以是字符串（"slow"、"fast"）或以毫秒为单位的数字，表示动画完成所需的时间。默认是 "400" 毫秒。
+        // easing（可选）：指定动画的缓动效果，可以是字符串（"linear"、"swing"）或自定义的缓动函数。默认是 "swing"。
+        // fn（可选）：在动画完成后执行的回调函数。
+
+
+        // slideToggle 方法用于切换元素的可见性状态，如果元素是可见的，则使用滑动效果将其折叠隐藏，如果元素是隐藏的，则使用滑动效果将其展开显示。
+        // 这使你可以在展开和折叠之间创建切换效果。
+        // 2. 滑动显示和隐藏方式
+        // 1. slideDown([speed],[easing],[fn])
+        // 2. slideUp([speed,[easing],[fn]])
+        // 3. slideToggle([speed],[easing],[fn])
+        //
+        // 3. 淡入淡出显示和隐藏方式
+        // 1. fadeIn([speed],[easing],[fn])
+        // 2. fadeOut([speed],[easing],[fn])
+        // 3. fadeToggle([speed,[easing],[fn]])
+
+
+    </script>
+    <script>
+        function hideFn() {
+            // $("#showDiv").hide("slow","swing")
+            // $("#showDiv").slideUp("slow","swing")
+            $("#showDiv").fadeIn("slow","swing")
+        }
+
+        function showFn() {
+            // $("#showDiv").show("normal","swing")
+            // $("#showDiv").slideDown("normal","swing")
+            $("#showDiv").fadeOut("normal","swing")
+        }
+
+
+        function toggleFn() {
+            // $("#showDiv").toggle("fast","swing")
+            // $("#showDiv").slideToggle("fast","swing")
+            $("#showDiv").fadeToggle("fast","swing")
+        }
+
+    </script>
+</head>
+<body>
+<input type="button" value="点击按钮隐藏div" onclick="hideFn()">
+<input type="button" value="点击按钮显示div" onclick="showFn()">
+<input type="button" value="点击按钮切换div显示和隐藏" onclick="toggleFn()">
+
+<div id="showDiv" style="width:300px;height:300px;background:pink">
+
+    div显示和隐藏
+</div>
+</body>
+</html>

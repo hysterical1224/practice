@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <script>
+        <!--创建正则对象-->
+        // var reg = new RegExp("");
+        // var reg = /正则表达式/;
+        //^:开始
+        //$:结束
+        var reg = new RegExp("^\\w{6,12}$");
+        var reg1 = /^\w{6,12}$/;
+        var username = "zhangsan";
+        //^: 表示字符串的开始位置。
+        //\w: 匹配任意一个字母、数字或下划线。
+        // {6,12}: 表示前面的 \w 要重复出现 6 到 12 次。
+        // $: 表示字符串的结束位置。
+        var b = reg1.test(zhangsan);
+        alert(b)
+    //1. 单个字符:[]
+    //如：[a] [ab] [a-zA-Z0-9_]
+    //* 特殊符号代表特殊含义的单个字符:
+    //\d:单个数字字符 [0-9]
+    //\w:单个单词字符[a-zA-Z0-9_]
+
+
+
+    //在 JavaScript 中，Global 对象（也被称为全局对象）是最顶层的对象，
+    // 它在浏览器环境中通常指的是 window 对象。Global 对象包含了 JavaScript 运行环境中的一些全局属性、方法和函数。
+    // 一些常见的 Global 对象中的属性和方法包括：
+    // NaN、Infinity、undefined：表示非数字、正无穷和未定义。
+    // parseInt()、parseFloat()：用于将字符串转换为整数或浮点数。
+    // isNaN()、isFinite()：判断一个值是否为 NaN 或有限数字。
+    // eval()：用于计算字符串中的 JavaScript 代码。
+    // Date、Math：提供日期和数学相关的功能。
+    // setTimeout()、setInterval()：用于设置定时器，执行函数或代码块。
+    // console：用于在开发者工具中输出日志和信息。
+    // 需要注意的是，尽管在浏览器环境中 Global 对象指的是 window，但在其他 JavaScript 运行环境（如 Node.js）中，Global 对象可能有不同的名称。
+    //
+    // Global 对象中的属性和方法是全局范围内都可以访问的，但在编写代码时应当避免滥用全局变量和函数，以避免命名冲突和不良影响。
+
+    </script>
+</head>
+<body>
+<!--
+创建正则表达式：
+正则表达式可以使用字面量形式或构造函数来创建。
+
+字面量形式：
+var pattern = /abc/;
+
+构造函数形式：
+var pattern = new RegExp("abc");
+
+测试字符串匹配：
+可以使用正则表达式的 test 方法测试一个字符串是否匹配某个模式。
+var pattern = /hello/;
+var result = pattern.test("hello, world"); // true
+
+匹配字符串：
+可以使用正则表达式的 match 方法在字符串中查找匹配的内容。
+var pattern = /world/;
+var result = "hello, world".match(pattern); // ["world"]
+
+替换字符串：
+可以使用正则表达式的 replace 方法将匹配的部分替换为指定的内容。
+var pattern = /world/;
+var replaced = "hello, world".replace(pattern, "universe"); // "hello, universe"
+
+查找匹配位置：
+正则表达式的 exec 方法可以查找匹配的位置，并返回匹配的结果。
+var pattern = /world/;
+var match = pattern.exec("hello, world"); // ["world", index: 7, input: "hello, world", groups: undefined]
+常用的正则表达式语法：
+
+.: 匹配任意字符（除了换行符）。
+[]: 匹配一组字符中的任意一个。
+^: 匹配字符串的开头。
+$: 匹配字符串的结尾。
+*: 匹配前一个字符的零次或多次。
++: 匹配前一个字符的一次或多次。
+?: 匹配前一个字符的零次或一次。
+|: 匹配两个或多个表达式中的一个。
+\: 转义字符，使特殊字符失去其特殊意义。
+{m,n}:表示m<=数量<=n
+
+
+*: 匹配前一个元素零次或多次。例如，a* 可以匹配 ""、"a"、"aa"、"aaa" 等。
++: 匹配前一个元素一次或多次。例如，a+ 可以匹配 "a"、"aa"、"aaa" 等，但不匹配 ""。
+?: 匹配前一个元素零次或一次。例如，a? 可以匹配 "" 或 "a"。
+{n}: 匹配前一个元素恰好 n 次。例如，a{3} 只匹配 "aaa"。
+{n,}: 匹配前一个元素至少 n 次。例如，a{2,} 可以匹配 "aa"、"aaa" 等。
+{n,m}: 匹配前一个元素至少 n 次，但不超过 m 次。例如，a{2,4} 可以匹配 "aa"、"aaa"、"aaaa"。
+*?, +?, ??, {n,}?, {n,m}?: 非贪婪量词，尽可能少地匹配。
+
+
+
+修饰符：
+在正则表达式中，可以使用修饰符来改变匹配的方式，如 i 表示不区分大小写匹配，g 表示全局匹配等。
+var pattern = /hello/i; // 不区分大小写匹配
+-->
+
+
+</body>
+</html>

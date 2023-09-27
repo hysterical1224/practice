@@ -1,0 +1,51 @@
+<?xml version='1.0' encoding="UTF-8"?>
+
+<!--1.编写 XML Schema 文件：首先，你需要编写一个符合 XML Schema 标准的 XSD 文件，定义你的数据结构、元素、类型、限制等。
+
+    2.将 XML 实例与 XSD 进行关联：在要使用约束的 XML 实例文件中，通过以下方式将实例与 XSD 文件进行关联：
+        <RootElement xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:SchemaLocation="your-schema.xsd">
+
+    3.校验 XML 实例：当使用约束的 XML 实例文件在应用程序中被加载时，XML 解析器会根据关联的 XSD 文件进行校验。
+    如果实例与约束不匹配，解析器会报告错误或警告。如果实例不符合约束规则，解析器会报告错误，指出不合规的地方。
+    如果实例符合约束规则，解析器会顺利解析。
+
+    4.解析和处理数据：一旦 XML 实例通过了约束校验，你可以在代码中使用解析库（如DOM、SAX等）来提取和操作 XML 数据。
+    -->
+
+<students xmlns="yahaha" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            xsi:schemaLocation="yahaha /day04/day09_xml/约束/schema约束/student.xsd">
+        <!--xmlns="yahaha"：这个属性指定了默认命名空间，将所有没有前缀的元素都置于 yahaha 命名空间下。
+        这意味着 <students> 元素及其子元素都属于命名空间 yahaha。
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"：
+        这个属性定义了命名空间前缀 xsi 并将其映射到 XML Schema 实例命名空间。
+
+        xsi:schemaLocation="yahaha 约束/schema约束/student.xsd"：这个属性指定了 XML Schema 的位置。
+        它使用了命名空间前缀 xsi 以及属性名称 schemaLocation。属性值包含两个部分，用空格分隔：
+        第一部分 "yahaha"：指定了命名空间，对应着之前声明的默认命名空间 xmlns="yahaha"。
+        第二部分 "约束/schema约束/student.xsd"：指定了实际的 XSD 文件的位置，可以根据需要进行调整。
+        所以，这个 <students> 元素声明了其属于命名空间 yahaha，
+        并通过 xsi:schemaLocation 属性指定了相应的 XML Schema 文件，用于对该元素和其内容进行约束和验证。
+        这种方式可以确保 <students> 元素的内容符合在 student.xsd 中定义的结构和规则。-->
+
+    <student number="0001">
+        <name>ss</name>
+        <age>12</age>
+        <sex>male</sex>
+    </student>
+
+    <student number="0002">
+        <name>sb</name>
+        <age>12</age>
+        <sex>male</sex>
+    </student>
+
+    <student number="0003">
+        <name>sd</name>
+        <age>12</age>
+        <sex>male</sex>
+    </student>
+
+
+
+</students>

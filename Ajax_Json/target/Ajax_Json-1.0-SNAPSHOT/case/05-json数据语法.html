@@ -1,0 +1,62 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        //1.定义基本格式
+        var person = {"name": "张三", age: 23, 'gender': true};
+
+        //获取name的值
+        //var name = person.name;
+        var name = person["name"];
+       // alert(name);
+
+        //alert(person);
+        //2.嵌套格式   {}———> []
+        var persons = {
+            "persons": [
+                {"name": "张三", "age": 23, "gender": true},
+                {"name": "李四", "age": 24, "gender": true},
+                {"name": "王五", "age": 25, "gender": false}
+                ]
+        };
+       // alert(persons);
+        //获取王五值
+        var name1 = persons.persons[2].name;
+       // alert(name1);
+
+
+        //2.嵌套格式   []———> {}
+        var ps = [{"name": "张三", "age": 23, "gender": true},
+            {"name": "李四", "age": 24, "gender": true},
+            {"name": "王五", "age": 25, "gender": false}];
+        //获取李四值
+        //alert(ps);
+        alert(ps[1].name);
+
+        //* 数据在名称/值对中：json数据是由键值对构成的
+        // * 键用引号(单双都行)引起来，也可以不使用引号
+        // * 值得取值类型：
+		// 		1. 数字（整数或浮点数）
+		// 		2. 字符串（在双引号中）
+		// 		3. 逻辑值（true 或 false）
+		// 		4. 数组（在方括号中）	{"persons":[{},{}]}
+        // 5. 对象（在花括号中） {"address":{"province"："陕西"....}}
+        // 6. null
+        // * 数据由逗号分隔：多个键值对由逗号分隔
+        // * 花括号保存对象：使用{}定义json 格式
+        // * 方括号保存数组：[]
+
+        for (var key in persons){
+            alert(key+":"+persons[key]);
+        }
+
+
+    </script>
+
+</head>
+<body>
+
+</body>
+</html>

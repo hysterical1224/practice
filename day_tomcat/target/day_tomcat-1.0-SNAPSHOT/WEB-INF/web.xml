@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
+         version="4.0">
+
+<!--<servlet> 元素用于配置一个 Servlet，其中包含以下子元素：
+
+<servlet-name>：指定 Servlet 的名称，它在该文件中必须是唯一的，通常用于在其他地方引用该 Servlet。
+<servlet-class>：指定 Servlet 类的完整类名，这个类会被容器实例化并处理请求。
+<servlet-mapping> 元素用于将一个 Servlet 映射到特定的 URL 路径，其中包含以下子元素：
+
+<servlet-name>：指定之前定义的 Servlet 的名称，这是映射关系的关键。
+<url-pattern>：指定一个 URL 路径，当用户请求匹配该路径时，容器会将请求发送给相应的 Servlet 进行处理。-->
+<!--    <servlet>-->
+<!--        <servlet-name>demo1</servlet-name>-->
+<!--        <servlet-class>com.example.day_tomcat.HelloServlet</servlet-class>-->
+<!--    </servlet>-->
+
+<!--    <servlet-mapping>-->
+<!--        <servlet-name>demo1</servlet-name>-->
+<!--        <url-pattern>/demo1</url-pattern>-->
+<!--    </servlet-mapping>-->
+<!--正数：当 <load-on-startup> 的值为正数时，表示该 Servlet 在容器启动时会被立即加载和初始化。
+而且，正数的值越小，优先级越高，先被加载。这在需要在应用启动时执行初始化操作的情况下非常有用，
+比如一些单例资源的初始化、数据库连接的建立等。通过这种配置，可以确保在应用运行之前，这些必要的初始化操作已经完成。
+
+负数：当 <load-on-startup> 的值为负数时，表示该 Servlet 不会在容器启动时被自动加载，而是在首次请求到达该 Servlet 时才会加载和初始化。
+这在需要延迟加载一些资源密集型的 Servlet 或只有在需要时才会被使用的 Servlet 时非常有用，避免不必要的启动时开销。
+
+零：当 <load-on-startup> 的值为零时，表示该 Servlet 会在容器启动时被加载，但具体的加载顺序会由容器来决定。
+这样的配置通常适用于那些没有特定的加载顺序要求的 Servlet。-->
+
+
+</web-app>

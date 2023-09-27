@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--事件（Event）： 事件是发生在应用程序中的特定操作或状态改变的表示。
+例如，用户点击鼠标、按下键盘键或是数据到达等都可以是事件。
+事件可以是系统级的（比如用户操作）也可以是应用级的（比如数据更新）。
+事件通常以某种方式被触发，然后会通知相关的监听器。
+
+监听器（Listener）： 监听器是一种编程模式，用于捕捉和处理特定事件的发生。
+监听器是一个函数或对象，它会注册到特定的事件上，并在事件发生时被调用执行
+。监听器用于响应事件，它会执行一些预定的操作来处理事件，
+例如更新用户界面、执行某些计算或触发其他的动作。-->
+
+    <img id="light" src="../moban2920/案例1-电灯开关/img/off.gif">
+    <script>
+        let light = document.getElementById("light");
+        var stage= "on.gif";
+        light.onclick= function () {
+            light.src="../moban2920/案例1-电灯开关/img/".concat(stage);
+            if (stage=="on.gif"){
+                stage="off.gif";
+            } else {
+                stage="on.gif";
+            }
+
+        }
+
+
+    </script>
+
+
+</body>
+</html>

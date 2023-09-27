@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--<form> 标签是 HTML 中的一个表单元素，用于创建用户交互的表单。
+它定义了一个包含用于收集用户输入的各种表单元素（如文本框、下拉列表、单选按钮等）的区域。定义了一个范围
+action :指定提交数据的URL， method：指定提交方式，-->
+<form action="#" method="get">
+    <label for="username">用户名：</label><input id = "username" name="username" placeholder="yahahh">
+    <br>
+    密码：<input type="password" name="password" value="123" ><br>
+    性别:<input type="radio" name="gender" value="male" checked>男
+    <input type="radio" name="gender" value="female">女
+    <br>
+    爱好：<input type="checkbox" name="hobby" value="1">乒乓球
+    <input type="checkbox" name="hobby" value="2">篮球
+    <input type="checkbox" name="hobby" value="3">足球
+    <br>
+    <input type="file" name="file" >
+    <input type="hidden" name="id" value="aaaaa">
+
+
+    <br>
+    <input type="submit" value="登录"><br>
+    <input type="image" src="../moban2920/images/image/jiangxuan_1.jpg" value="点击一下"><br>
+    <input type="button" value="yahaha">
+<!-- GET：表示使用 GET 方法提交表单。
+当用户点击提交按钮时，表单数据将会附加在 URL 的查询字符串中，并以键值对的形式出现，表单项的数据想要被提交，必须指定name值
+
+POST：表示使用 POST 方法提交表单。当用户点击提交按钮时，表单数据将会放在请求体中发送，而不会出现在 URL 中。
+适用于提交表单数据，因为数据放在请求体中，可以传输较大量的数据，并且相对安全，不会在 URL 上明文显示敏感信息。-->
+
+
+<!--input标签中的type属性，可以改变展示的样式，默认是text。-->
+
+
+
+
+<!--    checked 属性是用于表示复选框（checkbox）或单选按钮（radio button）是否被选中的属性。
+当设置了 checked 属性为 true 或者省略了 checked 属性时，复选框或单选按钮就会被默认选中-->
+
+<!--    <label> 标签是 HTML 中用于为表单元素添加标签的标签。
+它可以通过 for 属性关联到对应的表单元素，从而提高表单的可用性和可访问性。
+当用户点击 <label> 元素时，关联的表单元素将会获得焦点或被选中。-->
+
+
+</form>
+
+
+<!--隐藏域有以下几个主要的作用：
+
+传递数据：隐藏域可以用来在表单提交时传递一些额外的数据，例如用户的ID、状态信息、操作类型等，这些数据可以在后台进行处理。
+
+安全性：隐藏域可以用于存储一些敏感信息，因为用户无法直接修改其内容。这样可以避免敏感信息暴露在前端页面上，增加一定的安全性。
+
+状态保持：有些情况下，需要在多个页面之间保持一些状态信息，可以使用隐藏域来实现状态的传递和保持。-->
+
+<!--<input type="button" value="按钮">按钮跟js搭配使用-->
+
+<!--<input type="image" value="点击一下">
+是一个表单元素，用于在表单中创建一个可点击的图像按钮。
+当用户点击该图像按钮时，表单会被提交到服务器端，
+同时会提交鼠标点击的坐标作为表单的参数。-->
+
+
+<!--<input type="image"> 元素被设计成可以作为一个图像按钮用于表单提交。
+这个特性主要是为了实现图像地图（Image Map）的交互功能。
+
+Image Map 是一种在图像上定义多个热区（hotspot），每个热区可以与不同的链接或表单关联。
+当用户点击图像上的某个热区时，会触发相应的事件，例如跳转到其他页面或提交表单。
+而 <input type="image"> 元素就是用于实现这样的功能。-->
+<br>
+<form action="#" method="get">
+    取色器：<input type="color" name="colors"><br>
+    生日：<input type="date" name="birthday"><br>
+    生日：<input type="datetime-local" name="birth"><br>
+    邮箱:<input type="email" name="email"><br>
+    年龄：<input type="number" name=""age><br>
+    <select name="province">
+        <option value="">--请选择--</option>
+        <option value="1" selected>北京</option>
+        <option value="2">上海</option>
+        <option value="3">陕西</option>
+    </select>
+    <br>
+
+    <label for="yahaha">自我描述：</label>
+    <br>
+    <textarea id="yahaha" cols="100" rows="8" name="des"></textarea>
+
+
+
+
+
+
+
+    <input type="submit" value="登录">
+</form>
+
+</body>
+</html>

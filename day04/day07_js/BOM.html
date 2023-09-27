@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<!--BOM（浏览器对象模型）是指浏览器提供的一组对象，用于访问和控制浏览器窗口、浏览器本身以及与浏览器交互的功能。
+BOM 不同于 DOM，它专注于处理浏览器窗口和浏览器功能，而不是文档的内容和结构。
+
+BOM 提供了一系列对象，用于实现与浏览器窗口、页面导航、定时器、浏览器信息等相关的操作。
+
+
+一些常见的 BOM 对象包括：
+window 对象： 它代表浏览器窗口，是 BOM 的核心对象。通过 window 对象，
+可以访问和控制浏览器窗口的大小、位置、打开新窗口、关闭窗口等操作。
+navigator 对象： 用于获取浏览器的信息，如浏览器的名称、版本、所在平台等。
+screen 对象： 提供了关于用户屏幕的信息，如屏幕的宽度、高度、像素比例等。
+location 对象： 用于访问和操作当前页面的 URL，可以获取和设置页面的 URL。
+history 对象： 用于操作浏览器的历史记录，可以在浏览器历史记录中前进、后退等。
+setTimeout 和 setInterval 函数： 用于设置定时器，执行一些延迟或周期性的操作。
+
+BOM 的主要作用是提供与浏览器交互的能力，
+如获取用户浏览器的信息、操作浏览器窗口、导航控制、定时任务等。与 DOM 一起，BOM 构成了浏览器提供的 JavaScript 编程接口，使得开发者可以编写交互性强的网页应用程序。-->
+
+
+<!--
+confirm() 是一个 JavaScript 方法，用于在浏览器中显示一个确认框，询问用户是否确认某个操作。
+该方法会弹出一个包含消息和“确定”、“取消”两个按钮的对话框，用户可以选择点击其中一个按钮来确认或取消操作。
+confirm() 方法返回一个布尔值，表示用户的选择。
+
+以下是 confirm() 方法的使用方法示例：
+if (confirm('确定要执行操作吗？')) {
+  // 用户点击了“确定”按钮，执行操作
+  console.log('操作已确认');
+} else {
+  // 用户点击了“取消”按钮，取消操作
+  console.log('操作已取消');
+}
+
+在上面的示例中，当用户点击了确认框中的“确定”按钮时，confirm() 方法会返回 true，进入条件分支执行操作；
+当用户点击了“取消”按钮时，confirm() 方法会返回 false，进入另一个条件分支。
+根据用户的选择，可以在相应的条件分支中执行不同的操作。
+
+需要注意的是，confirm() 方法的使用可能会因为浏览器的设置或安全策略而受到限制。
+在某些情况下，浏览器可能会将弹出窗口的行为阻止或拦截。
+
+
+
+-->
+<!--<script>-->
+<!--    if (confirm('确定要执行操作吗？')) {-->
+<!--// 用户点击了“确定”按钮，执行操作-->
+<!--        alert('操作已确认');-->
+<!--    } else {-->
+<!--// 用户点击了“取消”按钮，取消操作-->
+<!--        alert('操作已取消');-->
+<!--    }-->
+
+<!--</script>-->
+
+<!--<script>-->
+<!--    let s = prompt("请输入用户名");-->
+<!--    alert(s);-->
+
+<!--</script>-->
+
+
+
+
+<!--
+document.getElementById() 是 JavaScript 中用于获取页面中特定 ID 的 HTML 元素的方法。
+它接受一个参数，即所需元素的 ID，然后返回一个表示该元素的对象。
+
+例如，如果你的 HTML 中有一个元素如下：
+<div id="myDiv">Hello, World!</div>
+你可以使用 document.getElementById("myDiv") 来获取该元素。
+返回的对象是一个表示该 <div> 元素的 DOM 元素节点。-->
+
+
+<!--<img id="light" src="../moban2920/案例1-电灯开关/img/off.gif">-->
+
+<!--<script>-->
+<!--    let light = window.document.getElementById(`light`);-->
+<!--    light.onclick= fun1();-->
+
+<!--    function fun1(){-->
+<!--        light.src="../moban2920/案例1-电灯开关/img/on.gif";-->
+<!--    }-->
+
+<!--</script>-->
+
+
+
+
+<!--
+prompt() 是 JavaScript 中的一个方法，
+用于在浏览器中显示一个对话框，通常用于获取用户的输入信息。
+该方法会弹出一个包含消息、输入框和“确定”、“取消”两个按钮的对话框，用户可以在输入框中输入信息，
+然后选择点击其中一个按钮来确认或取消操作。
+
+prompt() 方法的使用示例：
+
+var userInput = prompt('请输入您的名字：', '默认名字');
+if (userInput !== null) {
+  console.log('您输入的名字是：', userInput);
+} else {
+  console.log('您取消了输入');
+}
+
+
+在上面的示例中，prompt() 方法会弹出一个对话框，用户可以在输入框中输入名字。
+如果用户点击了“确定”按钮并输入了名字，那么 prompt() 方法会返回用户输入的字符串，然后执行相应的操作。
+如果用户点击了“取消”按钮，prompt() 方法会返回 null。
+
+常见的应用场景包括：
+提示用户输入信息，例如用户名、密码等。
+获取用户的选择或输入，然后根据用户的输入执行不同的操作。
+用于简单的交互式操作，例如提示用户输入一个数字或选项。
+需要注意的是，与 confirm() 一样，prompt() 方法的使用也可能受到浏览器的设置或安全策略的影响，
+有些浏览器可能会限制或拦截弹出窗口的行为。
+
+-->
+<input type="button" id="dudu" value="点一下，跳往百度">
+<input type="button" id="cls" value="点一下，关闭百度">
+
+<input type="button" id="address" value="刷新">
+<input type="button" id="addr" value="获得当前的url">
+<script>
+    var wdw;
+
+    let btn = document.getElementById("dudu");
+    btn.onclick= function (){
+        wdw = window.open("https://www.baidu.com");
+        return wdw;
+    }
+
+    let cl = document.getElementById("cls");
+
+    cl.onclick= function () {
+        return wdw.close();
+    }
+
+
+//    location 对象是 JavaScript 中的一个内置对象，用于获取和操作当前窗口的 URL。
+//    它提供了许多属性和方法，用于获取和修改浏览器地址栏中的 URL，从而实现页面的跳转和导航。
+
+// 以下是一些常用的 location 对象的属性和方法：
+
+
+// location.href：获取或设置当前页面的完整 URL。
+// location.protocol：获取当前页面的协议部分，如 "http:" 或 "https:"。
+// location.host：获取当前页面的主机名和端口号。
+// location.hostname：获取当前页面的主机名。
+// location.port：获取当前页面的端口号。
+// location.pathname：获取当前页面的路径部分。
+// location.search：获取当前页面的查询字符串部分（包含 "?" 符号）。
+// location.hash：获取当前页面的锚点部分（包含 "#" 符号）。
+// location.assign(url)：用指定的 URL 加载一个新页面。
+// location.replace(url)：用指定的 URL 替换当前页面的历史记录，不会创建新的历史记录。
+// location.reload()：重新加载当前页面。
+// 通过操作 location 对象，您可以实现页面的跳转、刷新和导航功能，以及获取当前页面的各个部分的信息。这使得您能够通过 JavaScript 在用户与页面交互时控制 URL 和页面的行为。
+//
+
+
+    let address = document.getElementById("address");
+    address.onclick = function () {
+        location.reload();
+    }
+
+    let addr = document.getElementById("addr");
+    addr.onclick = function (){
+        let href = location.href;
+        alert(href);
+    }
+
+//<a> 元素的 href 属性用于指定链接的目标 URL。当你设置 href 为 "javascript:void(0)" 时，
+// 实际上是在告诉浏览器执行一个 JavaScript 脚本，但这个脚本是一个无操作（no-op）的语句，
+// 因此不会产生实际的动作。
+
+//JavaScript 中的 void 运算符返回一个值为 undefined 的表达式，
+// 这意味着该表达式不会有实际的输出或动作。
+// 因此，javascript:void(0) 表示执行一个不产生任何效果的 JavaScript 脚本。
+
+// 这种做法通常用于阻止 <a> 链接的默认跳转行为，即点击链接时不会跳转到其他页面。
+// 在以前常用于避免点击链接时页面的重新加载，或者在使用 JavaScript 处理点击事件时防止链接跳转。
+
+
+
+
+
+</script>
+
+</body>
+</html>

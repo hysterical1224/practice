@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../css/register.css">
+</head>
+<body>
+<div class="register" >
+    <div  class="register_left">
+        <p>新用户注册</p>
+        <p>User Register</p>
+
+    </div>
+
+    <div  class="register_center">
+        <div class="rg_form">
+            <form action="#" method="post">
+                <!--border="1"时，表示表格的边框宽度为1个单位。
+                具体效果是在表格的每个单元格和表格之间添加一个1个单位宽度的边框，
+                这样可以更清晰地区分表格的边界和内容。-->
+                <table>
+                    <tr>
+                        <td class="table_left"><label for="id">用户名：</label></td>
+                        <td><input id="id" type="text" name="username" placeholder="请输入用户名"></td>
+                    </tr>
+
+                    <tr>
+                        <td class="table_left"><label for="pwd">密码：</label></td>
+                        <td><input id="pwd" type="password" name="password" placeholder="请输入密码"></td>
+                    </tr>
+
+
+                    <tr>
+                        <td class="table_left"><label for="gender">性别：</label></td>
+                        <td><input id="gender" type="radio" name="gender" value="male">男 &nbsp;&nbsp;
+                            <input id="gender1" type="radio" name="gender" value="female">女
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="table_left"><label for="email">邮箱：</label></td>
+                        <td><input id="email" type="email" name="email"></td>
+                    </tr>
+
+                    <tr>
+                        <td class="table_left"><label for="tel">电话：</label></td>
+                        <td><input id="tel" type="tel" name="tel"></td>
+                    </tr>
+
+                    <tr>
+                        <td class="table_left"><label for="birth">出生日期：</label></td>
+                        <td><input id="birth" type="date" name="birth"></td>
+                    </tr>
+
+                    <tr>
+                        <td class="table_left"><label for="checkcode">验证码：</label></td>
+                        <td><input id="checkcode" type="text" name="checkcode">
+                            <img id="img_verify" src="../案例2_注册页面(css)/img/verify_code.jpg">
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td colspan="2" align="center"><input id="btn_sub" type="submit" value="注册"></td>
+
+                    </tr>
+
+
+                </table>
+            </form>
+        </div>
+
+    </div>
+
+    <div  class="register_right">
+        <p>已有账号？<a href="#">立即登录</a></p>
+
+    </div>
+</div>
+
+</body>
+</html>

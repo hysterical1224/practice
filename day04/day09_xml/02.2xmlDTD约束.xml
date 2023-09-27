@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE students SYSTEM "F:\JavaSE_Heima\day04\day09_xml\约束\DTD约束\student.dtd">
+<!--某些解析器可能会在更深层次的文件夹中查找DTD文件，而某些解析器可能需要明确指定DTD文件的完整路径。
+最佳实践是将XML文档与其相关的DTD文件放在同一目录下，以确保解析器可以正确找到和加载所需的DTD文件。-->
+<students>
+    <student number="s001">
+        <name>zhangsan</name>
+        <age>23</age>
+        <sex>male</sex>
+    </student>
+
+</students>
+
+
+
+
+
+
+
+<!-- 约束：规定xml文档的书写规则
+		* 作为框架的使用者(程序员)：
+			1. 能够在xml中引入约束文档
+			2. 能够简单的读懂约束文档
+
+		* 分类：
+			1. DTD:一种简单的约束技术
+			2. Schema:一种复杂的约束技术
+
+     * DTD：
+			* 引入dtd文档到xml文档中
+				* 内部dtd：将约束规则定义在xml文档中
+				* 外部dtd：将约束的规则定义在外部的dtd文件中
+					* 本地：<!DOCTYPE 根标签名 SYSTEM "dtd文件的位置">
+					* 网络：<!DOCTYPE 根标签名 PUBLIC "dtd文件名字" "dtd文件的位置URL">
+
+
+			-->

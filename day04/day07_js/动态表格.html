@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>动态表格</title>
+
+    <style>
+        table{
+            border: 1px solid;
+            margin: auto;
+            width: 500px;
+        }
+
+        td,th{
+            text-align: center;
+            border: 1px solid;
+        }
+        div{
+            text-align: center;
+            margin: 50px;
+        }
+    </style>
+
+</head>
+<body>
+
+<div>
+    <input type="text" id="id" placeholder="请输入编号">
+    <input type="text" id="name"  placeholder="请输入姓名">
+    <input type="text" id="gender"  placeholder="请输入性别">
+    <input type="button" value="添加" id="btn_add">
+
+</div>
+
+
+<table>
+    <caption>学生信息表</caption>
+    <tr>
+        <th>编号</th>
+        <th>姓名</th>
+        <th>性别</th>
+        <th>操作</th>
+    </tr>
+
+    <tr>
+        <td>1</td>
+        <td>令狐冲</td>
+        <td>男</td>
+        <td><a href="javascript:void(0)" onclick="delTs(this)">删除</a></td>
+        <!--点击删除当前项，需要获取当前的句柄-->
+    </tr>
+
+    <tr>
+        <td>2</td>
+        <td>任我行</td>
+        <td>男</td>
+        <td><a href="javascript:void(0)" onclick="delTs(this)">删除</a></td>
+    </tr>
+
+    <tr>
+        <td>3</td>
+        <td>岳不群</td>
+        <td>?</td>
+        <td><a href="javascript:void(0)" onclick="delTs(this)">删除</a></td>
+    </tr>
+
+
+</table>
+<script>
+    function delTs(ts) {
+        let tr = ts.parentNode.parentNode;
+        let table = tr.parentNode;
+        table.removeChild(tr);
+    //    删除的过程中不能刷新页面的
+
+    }
+    let btn = document.getElementById("btn_add");
+    btn.onclick = function (){
+        let id = document.getElementById("id").value;
+        let name = document.getElementById("name").value;
+        let gender = document.getElementById("gender").value;
+
+
+
+        let td_id = document.createElement("td");
+        let text_id = document.createTextNode(id);
+        td_id.appendChild(text_id);
+
+        let td_name = document.createElement("td");
+        let text_name = document.createTextNode(name);
+        td_name.appendChild(text_name);
+
+        let td_gender = document.createElement("td");
+        let text_gender = document.createTextNode(gender);
+        td_gender.appendChild(text_gender);
+
+        let tr = document.createElement("tr");
+
+        let td_a = document.createElement("td");
+        let a = document.createElement("a");
+        a.setAttribute("href","javascript:void(0)");
+        a.setAttribute("onclick","delTs(this)");
+
+        let text_a = document.createTextNode("删除");
+
+
+        td_a.appendChild(a).appendChild(text_a);
+
+
+
+
+        tr.appendChild(td_id);
+        tr.appendChild(td_name);
+        tr.appendChild(td_gender);
+        tr.appendChild(td_a);
+        let tb = document.getElementsByTagName("table")[0];
+        alert(tb);
+        tb.appendChild(tr);
+
+    }
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+    <title>获取属性</title>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<script  src="../js/jquery-3.3.1.min.js"></script>
+	
+	
+	<style type="text/css">
+		 	div,span{
+			    width: 140px;
+			    height: 140px;
+			    margin: 20px;
+			    background: #9999CC;
+			    border: #000 1px solid;
+				float:left;
+			    font-size: 17px;
+			    font-family:Roman;
+			}
+			
+			div.mini{
+			    width: 30px;
+			    height: 30px;
+			    background: #CC66FF;
+			    border: #000 1px solid;
+			    font-size: 12px;
+			    font-family:Roman;
+			}
+			
+			div.visible{
+				display:none;
+			}
+	 </style>
+    
+	<script type="text/javascript">
+		//attr() 方法：
+			// 		attr() 用于获取或设置 HTML 元素的属性值。
+			// 它用于处理 HTML 属性，如 id、class、href 等。
+			// 无论属性是在 HTML 中定义的还是通过 JavaScript 动态创建的，attr() 都可以访问和修改。
+			// 对于布尔属性（例如 checked、disabled），attr() 返回属性的字符串值，而不是布尔值。
+
+		//prop() 方法：
+			// 		prop() 用于获取或设置元素的属性值，通常用于处理 DOM 元素的属性，如 checked、disabled、selected 等。
+			// 它返回属性的原始 JavaScript 属性值，而不是字符串。对于布尔属性，它返回布尔值。
+			// 通常用于处理表单元素、复选框、单选按钮、文本框等元素的状态。
+
+		$(function () {
+			//获取北京节点的name属性值
+			var name = $("#bj").attr("name");
+			// alert(name);
+
+
+			//设置北京节点的name属性的值为dabeijing
+			$("#bj").attr("name","dabeijing");
+
+			//新增北京节点的discription属性 属性值是didu
+			$("#bj").attr("discription","didu");
+			//删除北京节点的name属性并检验name属性是否存在
+			$("#bj").removeAttr("name");
+
+			//获得hobby的的选中状态
+			var check = $("hobby").prop("checked");
+
+
+			out.println(name);
+			out.prinln(check);
+
+		});
+
+
+
+		
+	</script>
+
+	
+	</head>
+	 
+	<body>
+				
+		 <ul>
+		 	 <li id="bj" name="beijing" xxx="yyy">北京</li>
+			 <li id="tj" name="tianjin">天津</li>
+		 </ul>
+		 <input type="checkbox" id="hobby"/>
+		 
+		
+	</body>
+	
+	
+   
+</html>
+
+
+

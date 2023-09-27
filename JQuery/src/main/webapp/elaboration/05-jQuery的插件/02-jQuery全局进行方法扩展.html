@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>01-jQuery对象进行方法扩展</title>
+    <script src="../../js/jquery-3.3.1.min.js" type="text/javascript" charset="utf-8"></script>
+    <script type="text/javascript">
+
+        //$.fn.extend(object) 主要用于扩展 jQuery 对象的原型，添加自定义方法，用于创建 jQuery 插件。
+        // $.extend(object) 主要用于合并对象的属性，创建一个新的对象，用于对象属性的操作。
+
+
+
+        //对全局方法扩展2个方法，扩展min方法：求2个值的最小值；扩展max方法：求2个值最大值
+        $.extend({
+            max:function (a, b) {
+                return a>=b?a:b;
+            },
+            min:function (a, b) {
+                return a<=b?a:b;
+            }
+        })
+        var max = $.max(4,3);
+        alert(max);
+
+        var min = $.min(1,2)
+        alert(min);
+    </script>
+</head>
+<body>
+</body>
+</html>
+

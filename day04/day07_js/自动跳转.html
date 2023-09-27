@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #p1{
+            text-align: center;
+        }
+        #nub{
+            color: red;
+        }
+
+    </style>
+</head>
+<body>
+<p id="p1">
+    <span id="nub">5</span>秒内进行调整
+</p>
+<script>
+
+    var num = 5;
+    let nub = document.getElementById("nub");
+    function fun(){
+        // num--;
+        if (num<=0){
+            location.href="https:\\www.baidu.com";
+        }
+
+        nub.innerHTML = num--;
+
+    }
+    setInterval(fun,1000);
+
+</script>
+
+</body>
+</html>

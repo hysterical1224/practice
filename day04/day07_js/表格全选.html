@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>表格全选</title>
+    <style>
+        table{
+            border: 1px solid;
+            width: 500px;
+            margin-left: 30%;
+        }
+
+        td,th{
+            text-align: center;
+            border: 1px solid;
+        }
+        div{
+            margin-top: 10px;
+            margin-left: 30%;
+        }
+
+        #out{
+            background-color: white;
+        }
+
+        #in{
+            background-color: wheat;
+        }
+    </style>
+
+
+
+</head>
+<body>
+
+<table>
+    <caption>学生信息表</caption>
+    <tr>
+        <th><input type="checkbox" name="cb"></th>
+        <th>编号</th>
+        <th>姓名</th>
+        <th>性别</th>
+        <th>操作</th>
+    </tr>
+
+    <tr>
+        <td><input type="checkbox" name="cb"></td>
+        <td>1</td>
+        <td>令狐冲</td>
+        <td>男</td>
+        <td><a href="javascript:void(0);">删除</a></td>
+    </tr>
+
+    <tr>
+        <td><input type="checkbox" name="cb"></td>
+        <td>2</td>
+        <td>任我行</td>
+        <td>男</td>
+        <td><a href="javascript:void(0);">删除</a></td>
+    </tr>
+
+    <tr>
+        <td><input type="checkbox" name="cb"></td>
+        <td>3</td>
+        <td>岳不群</td>
+        <td>?</td>
+        <td><a href="javascript:void(0);">删除</a></td>
+    </tr>
+
+</table>
+<div>
+    <input type="button" id="selectAll" value="全选">
+    <input type="button" id="unSelectAll" value="全不选">
+    <input type="button" id="selectRev" value="反选">
+</div>
+
+<script>
+    window.onload = function () {
+        //获得当前被点击的checkbox
+        let checkboxs = document.getElementsByName("cb");
+
+
+
+        let sa = document.getElementById("selectAll");
+        //全选框被点击
+        sa.onclick = function () {
+            if (checkboxs[0].checked == false) {
+                for (let box = 0; box < checkboxs.length; box++) {
+                    checkboxs[box].checked = true;
+                }
+            } else if (checkboxs[0].checked == true) {
+                for (let box = 0; box < checkboxs.length; box++) {
+                    checkboxs[box].checked = false;
+                }
+
+            }
+        }
+        
+        let us = document.getElementById("unSelectAll");
+        
+        us.onclick = function () {
+            
+        }
+        
+        let sr = document.getElementById("selectRev");
+        sr.onclick = function () {
+            for (let box = 0; box < checkboxs.length; box++) {
+                checkboxs[box].checked = !checkboxs[box].checked;
+            }
+
+        }
+
+    //    移到元素之上的事件
+        let trs = document.getElementsByTagName("tr");
+        for (let i = 0; i < trs.length; i++) {
+            trs[i].onmouseover = function () {
+                trs[i].id="in";
+            }
+        }
+
+        for (let i = 0; i < trs.length; i++) {
+            trs[i].onmouseout = function () {
+                trs[i].id="out";
+            }
+        }
+
+
+
+    }
+
+    
+
+</script>
+</body>
+</html>

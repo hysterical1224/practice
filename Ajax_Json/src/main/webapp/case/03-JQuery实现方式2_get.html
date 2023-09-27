@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../js/jquery-3.3.1.min.js"></script>
+    <script>
+        
+        //定义方法
+        function  fun() {
+            //$.get() 是 jQuery 提供的用于执行 HTTP GET 请求的简化方法。
+            // 它用于向指定 URL 发送 GET 请求，并在成功时执行回调函数以处理响应数据。以下是 $.get() 方法的基本用法和参数解释：
+
+            //$.get(url, data, success, dataType);
+            //url：要发送 GET 请求的目标 URL。
+            //data（可选）：要发送到服务器的数据。可以是一个对象，一个查询字符串（字符串形式的参数），或者可以为空。
+            //success（可选）：请求成功时的回调函数。当服务器返回成功响应时，该函数将被执行，并将响应数据作为参数传递给它。
+            //dataType（可选）：预期的响应数据类型。常见的值包括 "json"、"xml"、"text" 等。jQuery 将根据此值自动解析响应数据。
+            //                  如果未指定，jQuery 将自动推断响应类型。
+
+            $.get("../AjaxDemo3",{username:"rose"},function (data) {
+                //function (data) { alert(data); }：这是请求成功后执行的回调函数。data 参数包含了服务器响应的数据。
+                //在这个示例中，当请求完成后，会弹出一个包含响应数据的警告框。
+                alert(data);
+            },"text");
+
+        }
+        
+    </script>
+    
+    
+</head>
+<body>
+
+    <input type="button" value="发送异步请求" onclick="fun();">
+
+    <input>
+</body>
+</html>

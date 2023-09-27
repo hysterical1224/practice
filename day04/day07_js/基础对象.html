@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<!--JavaScript 中的基本对象是构成 JavaScript 语言核心的一组预定义对象，它们提供了许多常用的功能和方法，用于处理不同的数据类型、执行操作和与浏览器环境交互。以下是一些常见的 JavaScript 基本对象及其作用：
+
+Object： JavaScript 中的所有对象都是 Object 的实例。
+它是一个通用的基础对象，具有属性和方法，可以作为其他对象的基础。它用于创建自定义对象。
+Array： 数组对象用于存储一组有序的值，可以通过索引访问数组中的元素。它提供了一系列方法来操作和处理数组数据。
+String： 字符串对象用于表示和操作文本数据。它提供了许多字符串操作的方法，如连接、截取、查找等。
+Number： 数字对象用于表示数字值，包括整数和浮点数。它提供了数值的运算方法和属性。
+Boolean： 布尔对象用于表示布尔值（true 或 false）。它提供了布尔值的操作和比较方法。
+Function： 函数对象用于定义和调用函数。函数是 JavaScript 中的核心概念，它允许封装一段可执行的代码块。
+Date： 日期对象用于操作日期和时间。它提供了处理日期、时间和时间戳的方法。
+RegExp： 正则表达式对象用于处理文本的模式匹配。它可以用于检索、替换和验证字符串。
+Math： Math 对象提供了数学运算相关的方法和常量。它不是一个构造函数，而是一个静态对象。
+Global（window）： 全局对象在浏览器环境中是 window 对象，在 Node.js 环境中是 global 对象。它提供了全局范围的属性和方法，用于控制浏览器窗口、文档和全局操作。-->
+
+
+
+
+<!--定义函数：
+在 JavaScript 中，可以通过多种方式定义函数，最常见的方式是使用函数声明和函数表达式。
+
+函数声明：
+function greet(name) {
+    return "Hello, " + name + "!";
+}
+
+函数表达式：
+var greet = function(name) {
+    return "Hello, " + name + "!";
+};
+
+调用函数：
+函数定义后，可以通过函数名加括号来调用它，并传递参数。
+var result = greet("Alice");
+console.log(result); // 输出：Hello, Alice!
+
+函数参数和返回值：
+函数可以接受零个或多个参数，执行操作并返回值。参数可以在函数定义时指定，返回值可以使用 return 关键字返回。
+function add(a, b) {
+    return a + b;
+}
+var sum = add(3, 5); // sum 的值为 8
+
+
+
+函数作为值：
+在 JavaScript 中，函数也是一种数据类型，可以赋值给变量、作为参数传递给其他函数或从函数中返回。
+
+javascript
+Copy code
+var operation = add; // 函数赋值给变量
+var result = operation(4, 6); // result 的值为 10
+立即执行函数：
+立即执行函数（Immediately Invoked Function Expression，IIFE）是一种在声明后立即执行的函数。
+
+javascript
+Copy code
+(function() {
+    // 此处放置需要立即执行的代码
+})();
+闭包：
+闭包是指一个函数能够访问其外部作用域中的变量，即使在外部函数已经执行完毕的情况下。
+
+javascript
+Copy code
+function createCounter() {
+    var count = 0;
+    return function() {
+        return ++count;
+    };
+}
+
+var counter = createCounter();
+console.log(counter()); // 输出：1
+console.log(counter()); // 输出：2
+箭头函数：
+箭头函数是 ES6 引入的一种简化函数定义的方式，它使用 => 符号来定义函数。
+
+javascript
+Copy code
+var multiply = (a, b) => a * b;
+console.log(multiply(2, 3)); // 输出：6
+函数在 JavaScript 中是非常重要的概念，它们允许你将代码模块化、重用和组织起来，从而实现更高效的编程。不仅可以用于处理业务逻辑，还可以用于处理异步操作、事件处理等。-->
+
+
+<!--在方法声明中有一个隐藏的内置对象《数组)，arguments，封装所有实际参数-->
+
+</body>
+</html>

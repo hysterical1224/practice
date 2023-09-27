@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../js/jquery-3.3.1.min.js"></script>
+    <script>
+        
+        //定义方法
+        function  fun() {
+            //使用$.ajax()发送异步请求
+            //$.ajax() 是 jQuery 提供的用于执行异步 HTTP 请求的强大方法，它允许你以简单且可配置的方式进行 AJAX 请求。
+            // 以下是 $.ajax() 方法的主要参数和功能解读：
+
+            //url：要发送请求的目标 URL。可以是相对路径或绝对路径。
+            //method：HTTP 请求方法，如 "GET"、"POST"、"PUT"、"DELETE" 等。默认是 "GET"。
+            // data：要发送到服务器的数据。可以是对象、字符串或序列化的表单数据。
+            // dataType：预期的响应数据类型。常见的值包括 "json"、"xml"、"text" 等。
+            //           jQuery 将根据此值自动解析响应数据。默认是 "intelligent guess"，即自动判断。
+            // success：请求成功时的回调函数。当服务器返回成功响应时，该函数将被执行，并将响应数据作为参数传递给它。
+            // error：请求失败时的回调函数。当请求出现错误（如网络问题、服务器错误）时，该函数将被执行，可以用于处理错误情况。
+            // complete：请求完成后的回调函数。无论请求成功或失败，都会执行。通常用于清理操作或处理请求完成后的其他逻辑。
+
+            $.ajax({
+                url:"AjaxDemo2" , // 请求路径
+                type:"POST" , //请求方式
+                //data: "username=jack&age=23",//请求参数
+                data:{"username":"jack","age":23},
+                success:function (data) {
+                    alert(data);
+                },//响应成功后的回调函数
+                error:function () {
+                    alert("出错啦...")
+                },//表示如果请求响应出现错误，会执行的回调函数
+
+                dataType:"text"//设置接受到的响应数据的格式
+            });
+        }
+        
+    </script>
+    
+    
+</head>
+<body>
+
+    <input type="button" value="发送异步请求" onclick="fun();">
+
+    <input>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--<head>标签通常用于定义文档的元数据和导入外部资源，如样式表和脚本文件。-->
+    <meta charset="UTF-8">
+    <title>css</title>
+
+<!--rel="stylesheet"：这是一个<link>标签的属性，指定链接的资源是一个样式表（CSS文件）。
+href="../css/a.css"：也是一个<link>标签的属性，指定链接的目标资源文件是a.css，位于上一级目录下的css文件夹中。-->
+    <link rel="stylesheet" href="../css/a.css">
+    <style>
+        div{
+            color: beige;
+        }
+
+    </style>
+<!--<link>标签的rel属性除了可以用于链接样式表（stylesheet），还可以链接其他类型的资源。几个常见的rel属性值包括：
+
+rel="stylesheet"：链接一个样式表（CSS文件）。
+rel="icon"：指定网站的图标，通常用于网站的favicon图标。
+rel="preload"：用于预加载资源，可以在页面加载时提前加载指定的资源，例如预加载字体或其他文件。
+rel="alternate"：指定当前文档的替代版本，通常用于指定不同的语言或媒体类型的文档。
+rel="next"和rel="prev"：用于指定页面的下一页和上一页。
+rel="canonical"：指定一个规范的URL，用于解决搜索引擎的重复内容问题。-->
+
+
+
+</head>
+<body>
+<!--CSS被称为层叠样式表（Cascading Style Sheets）
+是因为它具有层叠性，即多个样式规则可以同时作用于同一个元素，并按照一定的优先级进行叠加。
+当多个样式规则应用到同一个HTML元素时，CSS会按照一定的优先级来确定最终的样式。-->
+
+<!--内联样式（Inline Style）：将CSS样式直接应用到HTML元素的style属性中。
+这种样式只对当前元素生效，不会影响其他元素。-->
+
+<!--内部样式（Internal Style）：将CSS样式放置在HTML文档的<head>标签内，
+使用<style>标签定义。这种样式适用于整个HTML文档，但仅限于当前文档。-->
+
+<!--外部样式（External Style）：将CSS样式放置在一个单独的外部CSS文件中，
+然后在HTML文档中通过<link>标签导入。这种样式适用于整个HTML文档，
+也可以在多个HTML文档中共享同一个样式文件。-->
+
+
+
+
+<!--内部样式使用<style>标签是因为它可以将样式规则直接嵌入到HTML文档中，
+从而实现了样式和内容的结合。<style>标签位于HTML文档的头部，用于定义页面中的样式规则，
+这些样式规则将应用于整个文档中的元素。-->
+<div>hello css</div>
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        /*div p{*/
+        /*    color: #6f42c1;*/
+        /*}*/
+    /*    div p{}：这是一个后代选择器，它会选择所有在<div>元素内部的<p>元素，不论它们嵌套在多少层级下。*/
+
+        div>p{
+            color: red;
+        }
+    /*  div>p{}：这是一个子选择器，div>p{}选择所有直接作为<div>子元素的<p>元素，
+    不包括嵌套在更深层级的子元素。  */
+        input[type="text"]{
+            border: #005cbf solid 100px;
+            color: #1e7e34;
+        }
+        a:link{
+            color: #9fcdff;
+
+        }
+
+        a:hover{
+            color: deeppink;
+        }
+
+        a:visited{
+            color: black;
+        }
+/*
+ a:link：选择所有尚未被访问过的链接。
+a:visited：选择所有已经被访问过的链接。
+a:hover：选择鼠标悬停在链接上的状态。
+a:active：选择链接被点击的状态。
+*/
+    </style>
+
+
+
+</head>
+<body>
+<!--子选择器-->
+<!--div>p{}：这是一个子选择器，表示选择所有直接作为<div>子元素的<p>元素。-->
+<!--div p{}：这是一个后代选择器，表示选择所有在<div>元素内部的<p>元素，不论它们嵌套在多少层级下。-->
+<div>
+    good<br>
+    <p>yahahh</p>
+    <div>
+        <p>good丫</p>
+        <div><p>yahahahahah</p></div>
+    </div>
+</div>
+
+
+用户名：<input type="text" name="user">
+<!--属性选择器是 CSS 中的一种选择器，通过元素的属性值来选择特定的元素。属性选择器可以根据元素的属性名和属性值、属性值的前缀、后缀或包含关系等条件来选择元素。
+CSS 中常见的属性选择器有以下几种：
+示例：input[type] 会选择所有拥有 type 属性的 <input> 元素。
+示例：input[type="text"] 会选择所有 type 属性值为 "text" 的 <input> 元素。
+示例：a[rel~="nofollow"] 会选择所有 rel 属性值包含 "nofollow" 的 <a> 元素。
+[attribute|=value]: 选择属性值是以指定值开头的元素，或者以指定值加连字符 "-" 开头的元素。
+示例：a[lang|="en"] 会选择所有 lang 属性值是 "en" 或以 "en-" 开头的 <a> 元素。
+示例：a[href^="https://"] 会选择所有 href 属性值以 "https://" 开头的 <a> 元素。
+示例：img[src$=".png"] 会选择所有 src 属性值以 ".png" 结尾的 <img> 元素。
+示例：input[name*="user"] 会选择所有 name 属性值包含 "user" 的 <input> 元素。-->
+
+
+<!--伪选择器-->
+<!--伪选择器是 CSS 中的一种选择器，用于选择页面上的特定状态或位置的元素，而不是基于元素的实际属性值。
+它们通常以冒号（:）开头。
+CSS 中常见的伪选择器有以下几种：
+:hover：选择鼠标悬停在元素上时的状态。
+示例：a:hover 会选择所有鼠标悬停在 <a> 元素上的情况。
+
+:active：选择元素处于活动状态（例如被点击）时的状态。
+示例：button:active 会选择所有处于活动状态的 <button> 元素。
+
+:focus：选择元素获得焦点时的状态，通常用于表单元素。
+示例：input:focus 会选择所有获得焦点的 <input> 元素。
+
+:first-child：选择元素是其父元素的第一个子元素时的状态。
+示例：ul li:first-child 会选择所有作为 <ul> 子元素的第一个 <li> 元素。
+
+:last-child：选择元素是其父元素的最后一个子元素时的状态。
+示例：ul li:last-child 会选择所有作为 <ul> 子元素的最后一个 <li> 元素。
+
+:nth-child(n)：选择元素是其父元素的第 n 个子元素时的状态。
+示例：ul li:nth-child(2) 会选择所有作为 <ul> 子元素的第二个 <li> 元素。
+
+:nth-last-child(n)：选择元素是其父元素的倒数第 n 个子元素时的状态。
+示例：ul li:nth-last-child(2) 会选择所有作为 <ul> 子元素的倒数第二个 <li> 元素。
+
+:not(selector)：选择不匹配指定选择器的元素。
+示例：input:not([type="text"]) 会选择所有不是 <input type="text"> 的输入元素。
+
+伪选择器可以帮助我们根据元素的状态或位置来选择元素，并为其应用样式。
+它们为 CSS 提供了更多的选择能力，使得我们可以更加精确地控制页面元素的样式和行为。-->
+<br>
+
+<a href="#">点我</a>
+
+
+</body>
+</html>

@@ -1,0 +1,90 @@
+<?xml version="1.0"?>
+<xsd:schema xmlns="yahaha"
+            xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+            targetNamespace="yahaha" elementFormDefault="qualified">
+
+<!--<xsd:schema>: 这是XSD文档的根元素，用于定义XML文档的结构和约束规则。以下是其属性和子元素的解释：
+xmlns="yahaha"：这一部分指定了默认的命名空间。所有在此 <xsd:schema> 元素内部没有前缀的元素和类型都属于这个命名空间。-->
+
+<!--xmlns:xsd="http://www.w3.org/2001/XMLSchema": 定义了命名空间前缀 "xsd" 对应的命名空间URI，
+用于引用XML Schema的数据类型和结构。
+
+这是一个通用的约定，用于引用 XML Schema 中定义的各种元素和类型。
+-->
+
+<!--targetNamespace：在 XML Schema 定义中，targetNamespace 用于指定你正在定义的 XML Schema 的命名空间。
+命名空间是用来确保在一个大型的、分布式的XML系统中，不同的文档、元素、类型等之间不会发生名称冲突。
+这个命名空间在你的XML Schema中是一个唯一标识。-->
+
+<!--elementFormDefault="qualified": 表示文档中的元素必须使用命名空间限定，以与目标命名空间关联。-->
+
+
+    <xsd:element name="students" type="studentsType"/>
+    <xsd:complexType name="studentsType">
+        <xsd:sequence>
+            <xsd:element name="student" type="studentType" minOccurs="0" maxOccurs="unbounded"/>
+        </xsd:sequence>
+<!--<xsd:sequence>：这是一个用于定义元素顺序的容器。它表示所包含的元素必须按照定义的顺序出现。
+
+<xsd:element name="student" type="studentType" minOccurs="0" maxOccurs="unbounded"/>：
+这是定义在 <xsd:sequence> 内的元素。-->
+    </xsd:complexType>
+    <xsd:complexType name="studentType">
+        <xsd:sequence>
+            <xsd:element name="name" type="xsd:string"/>
+            <xsd:element name="age" type="ageType" />
+            <xsd:element name="sex" type="sexType" />
+        </xsd:sequence>
+        <xsd:attribute name="number" type="numberType" use="required"/>
+    </xsd:complexType>
+    <xsd:simpleType name="sexType">
+        <xsd:restriction base="xsd:string">
+            <xsd:enumeration value="male"/>
+            <xsd:enumeration value="female"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+    <xsd:simpleType name="ageType">
+        <xsd:restriction base="xsd:integer">
+            <xsd:minInclusive value="0"/>
+            <xsd:maxInclusive value="256"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+    <xsd:simpleType name="numberType">
+        <xsd:restriction base="xsd:string">
+            <xsd:pattern value="ss_\d{4}"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+</xsd:schema>
+
+        <!--
+        * Schema:
+                * 引入：
+                    1.填写xml文档的根元素
+                    2.引入xsi前缀.  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                    3.引入xsd文件命名空间.  xsi:schemaLocation="http://www.itcast.cn/xml  student.xsd"
+                    4.为每一个xsd约束声明一个前缀,作为标识  xmlns="http://www.itcast.cn/xml"
+
+                <students   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                    xmlns="http://www.itcast.cn/xml"
+                    xsi:schemaLocation="http://www.itcast.cn/xml  student.xsd">
+
+
+        -->
+
+
+
+
+
+<!--DTD是一种基于文本的定义方法，其语法相对简单。-->
+<!--        DTD不支持数据类型约束，只能对元素和属性的结构进行约束。-->
+<!--        DTD不支持命名空间。-->
+<!--        DTD的验证机制相对宽松，无法提供详细的错误信息。-->
+
+<!--        XML Schema:-->
+<!--        XML Schema是一种更现代、更强大的约束定义方法，它使用XML语法本身来定义文档结构和数据类型。
+XML Schema具有以下特点：-->
+
+<!--        XML Schema是基于XML语法的，因此更灵活且更强大。它允许定义元素、属性、数据类型、命名空间等。-->
+<!--        XML Schema支持更丰富的数据类型约束，例如字符串、数字、日期等。-->
+<!--        XML Schema支持命名空间，可以更好地管理复杂的文档结构。-->
+<!--        XML Schema的验证机制更严格，可以提供详细的错误信息。-->
